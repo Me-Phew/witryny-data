@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap);
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #444;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #f2f2f2;
+    background-image: linear-gradient(#f2f2f2, #444);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #222;
+}
+
+.language-select {
+    position: fixed;
+    right: 20px;
+    top: 35%;
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    cursor: pointer;
+    transition: width 200ms, height 200ms;
+    width: 60px;
+    height: 45px;
+    overflow: hidden;
+    gap: 5px;
+    user-select: none;
+}
+
+.language-select.expanded {
+    width: 400px;
+    height: 120px;
+}
+
+.language-select button {
+    width: 50%;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.language-select.expanded button {
+    display: block;
+}
+
+.language-select label {
+    cursor: pointer;
+}
+
+.language-select select {
+    display: none;
+}
+
+.language-select.expanded select {
+    display: block;
+}
+
+.task {
+    background-color: grey;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.task h1 {
+    color: #f9ff9f;
+}
+
+#clock {
+    display: inline-block;
+    width: 80px;
+}
+
+#calendar-clock {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.solution {
+    border-radius: 5px;
+    background-color: #444;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.task:nth-of-type(2) .solution, .task:nth-of-type(3) .solution {
+    gap: 10px;
+}
+
+.calendar-section-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.calendar-pages-container {
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.calendar-controls-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px 0 100px;
+}
+
+.calendar-input-wrapper {
+    display: none;
+}
+
+.calendar-input-wrapper.show {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+button.refresh {
+    display: none;
+}
+
+button.refresh.show {
+    display: block;
+}
+
+.calendar-controls {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    width: 200px;
+    color: #222;
+    font-size: 18px;
+    text-align: center;
+}
+
+.calendar-page {
+    display: flex;
+    flex-flow: column;
+    border: 4px #f2f2f2 ridge;
+    border-radius: 5px;
+    align-items: center;
+    background-color: lavender;
+    height: 150px;
+    width: 130px;
+    box-shadow: #222 5px 5px;
+}
+
+.calendar-page p {
+    font-size: 15px;
+    color: #222;
+}
+
+.calendar-page p:nth-of-type(1) {
+    font-size: 18px;
+}
+
+.calendar-page p:nth-of-type(2) {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.calendar-page p:nth-of-type(3) {
+    font-size: 16px;
+}
+
+.calendar-page.current p:nth-of-type(4) {
+    font-size: 18px;
+}
+
+.calendar-page.current {
+    background-color: dodgerblue;
+}
+
+.calendar-page.current p {
+    color: #f2f2f2;
+}
+
+button {
+    padding: 10px;
+    color: #222;
+    user-select: none;
+}
+
+select, optgroup, option {
+    user-select: none;
+    color: black;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="language-select expanded">
+        <label for="language-select">Język</label>
+        <select name="language-select" id="language-select">
+            <optgroup label="Europa">
+                <option value="pl-PL">Polski</option>
+                <option value="cs-CZ">Czeski (Republika Czeska)</option>
+                <option value="da-DK">Duński (Dania)</option>
+                <option value="de-AT">Austriacki niemiecki</option>
+                <option value="de-CH">„Szwajcarski” niemiecki</option>
+                <option value="fr-CH">„Szwajcarski” francuski</option>
+                <option value="it-CH">„Szwajcarski” włoski</option>
+                <option value="it-IT">Włoski</option>
+                <option value="fr-FR">Francuski</option>
+                <option value="de-DE">Niemiecki</option>
+                <option value="el-GR">Współczesny grecki</option>
+                <option value="en-GB">Brytyjski angielski</option>
+                <option value="en-IE">Irlandzki angielski</option>
+                <option value="es-ES">Kastylijski Hiszpański (Środkowo-północna Hiszpania)</option>
+                <option value="fi-FI">Fiński (Finlandia)</option>
+                <option value="fr-BE">Belgjski Francuski</option>
+                <option value="hu-HU">Węgierski (Węgry)</option>
+                <option value="nl-BE">Belgijski holenderski</option>
+                <option value="nl-NL">Holenderski (Holandia)</option>
+                <option value="no-NO">Norweski (Norwegia)</option>
+                <option value="pt-PT">Europejski portugalski (Portugalia)</option>
+                <option value="ro-RO">Rumuński (Rumunia)</option>
+                <option value="ru-RU">Rosyjski (Federacja Rosyjska)</option>
+                <option value="sk-SK">Słowacki (Słowacja)</option>
+                <option value="sv-SE">Szwedzki (Szwecja)</option>
+            </optgroup>
+
+            <optgroup label="Ameryka Północna">
+                <option value="en-US">Angielski amerykański</option>
+                <option value="en-CA">Angielski kanadyjski</option>
+                <option value="es-US">Amerykański hiszpański</option>
+                <option value="es-MX">Meksykański hiszpański</option>
+                <option value="fr-CA">Kanadyjski francuski</option>
+            </optgroup>
+
+            <optgroup label="Ameryka Południowa">
+                <option value="es-AR">Argentyński hiszpański</option>
+                <option value="es-CL">Chilijski hiszpański</option>
+                <option value="es-CO">Kolumbijski hiszpański</option>
+                <option value="pt-BR">Brazylijski portugalski</option>
+            </optgroup>
+
+            <optgroup label="Azja">
+                <option value="ar-SA">Arabski (Arabia Saudyjska)</option>
+                <option value="bn-BD">Bangla (Bangladesz)</option>
+                <option value="bn-IN">Bangla (Indie)</option>
+                <option value="hi-IN">hindi (Indie)</option>
+                <option value="en-IN">Angielski indyjski </option>
+                <option value="he-IL">Hebrajski (Izrael)</option>
+                <option value="id-ID">Indonezyjski (Indonezja)</option>
+                <option value="ja-JP">Japoński (Japonia)</option>
+                <option value="ko-KR">Koreański (Republika Korei)</option>
+                <option value="ta-IN">Indyjski tamilski</option>
+                <option value="ta-LK">Tamil (Sri Lanka)</option>
+                <option value="th-TH">Tajski (Tajlandia)</option>
+                <option value="tr-TR">Turecki (Turcja)</option>
+                <option value="zh-CN">Chiny kontynentalne, znaki uproszczone</option>
+                <option value="zh-HK">Hong Kong, znaki tradycjne</option>
+                <option value="zh-TW">Taiwan, znaki tradycjne</option>
+            </optgroup>
+
+            <optgroup label="Australia/Oceania">
+                <option value="en-AU">Angielski australijski</option>
+                <option value="en-NZ">Angielski nowozelandzki</option>
+            </optgroup>
+
+            <optgroup label="Afryka">
+                <option value="en-ZA">Angielski (Afryka Południowa)</option>
+            </optgroup>
+        </select>
+        <button>Ukryj</button>
+    </section>
+    <section class="task">
+        <h1>Zadanie 1</h1>
+        <div class="solution">
+            <h3>Rozwiązanie 1:</h3>
+            <p id="current-date-1"></p>
+            <div class="date-controls">
+                <button onclick="previousWeek1()">Tydzień do przodu</button>
+                <button onclick="nextMonth1()">Miesiąc wstecz</button>
+            </div>
+        </div>
+        <div class="solution">
+            <h3>Rozwiązanie 2:</h3>
+            <p id="current-date-2"></p>
+            <div class="date-controls">
+                <button onclick="previousWeek2()">Tydzień do przodu</button>
+                <button onclick="nextMonth2()">Miesiąc wstecz</button>
+            </div>
+        </div>
+    </section>
+    <section class="task">
+        <h1>Zadanie 2</h1>
+        <div class="solution">
+            <h3>Rozwiązanie:</h3>
+            <p>Obecny dzień: <span id="today"></span></p>
+            <p>Aktualna godzina: <span id="clock"></span></p>
+        </div>
+    </section>
+    <section class="task">
+        <h1>Zadanie 3</h1>
+        <div class="solution">
+            <h3>Rozwiązanie:</h3>
+            <section class="calendar-section-wrapper">
+                <div class="calendar-controls-wrapper">
+                    <div class="calendar-controls">
+                        <div>
+                            <label for="previous-days">Ilosć poprzednich dni</label>
+                            <select name="previous-days" id="previous-days">
+                                <optgroup label="Tygodnie">
+                                    <option value="7" >1 tydzień</option>
+                                    <option value="14">2 tygodnie</option>
+                                    <option value="21">3 tygodnie</option>
+                                </optgroup>
+                                <optgroup label="Dni">
+                                    <option value="3">3 dni</option>
+                                    <option value="1">1 dzień</option>
+                                </optgroup>
+                                <optgroup label="Miesiące">
+                                    <option value="31">1 miesiąc</option>
+                                    <option value="93">3 miesiące</option>
+                                    <option value="186">6 miesięcy</option>
+                                    <option value="279">9 miesięcy</option>
+                                </optgroup>
+                                <optgroup label="Lata">
+                                    <option value="365">1 rok</option>
+                                    <option value="1825">5 lat</option>
+                                </optgroup>
+                                <optgroup label="Własne wartości">
+                                    <option value="weeks">Tygodnie</option>
+                                    <option value="days">Dni</option>
+                                    <option value="months">Miesiące</option>
+                                    <option value="years">Lata</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="calendar-input-wrapper" id="previous-days-input-wrapper">
+                            <label for="previous-days-input" id="previous-days-label"></label>
+                            <input type="number"
+                                   min="0"
+                                   name="previous-days-input"
+                                   id="previous-days-input">
+                        </div>
+                    </div>
+                    <div class="calendar-controls">
+                        <div>
+                            <label for="upcoming-days">Ilość nadchodzących dni</label>
+                            <select name="upcoming-days" id="upcoming-days">
+                                <optgroup label="Tygodnie">
+                                    <option value="7" >1 tydzień</option>
+                                    <option value="14">2 tygodnie</option>
+                                    <option value="21">3 tygodnie</option>
+                                </optgroup>
+                                <optgroup label="Dni">
+                                    <option value="3">3 dni</option>
+                                    <option value="1">1 dzień</option>
+                                </optgroup>
+                                <optgroup label="Miesiące">
+                                    <option value="31">1 miesiąc</option>
+                                    <option value="93">3 miesiące</option>
+                                    <option value="186">6 miesięcy</option>
+                                    <option value="279">9 miesięcy</option>
+                                </optgroup>
+                                <optgroup label="Lata">
+                                    <option value="365">1 rok</option>
+                                    <option value="1825">5 lat</option>
+                                </optgroup>
+                                <optgroup label="Własne wartości">
+                                    <option value="weeks">Tygodnie</option>
+                                    <option value="days">Dni</option>
+                                    <option value="months">Miesiące</option>
+                                    <option value="years">Lata</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="calendar-input-wrapper" id="upcoming-days-input-wrapper">
+                            <label for="upcoming-days-input" id="upcoming-days-label"></label>
+                            <input type="number"
+                                   min="0"
+                                   name="upcoming-days-input"
+                                   id="upcoming-days-input">
+                        </div>
+                    </div>
+                </div>
+                <button class="refresh" onclick="updateCalendarInput()">Odśwież</button>
+            </section>
+        </div>
+    </section>
+</body>
+<script src="app.js"></script>
+</html>
